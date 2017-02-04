@@ -75,7 +75,7 @@ def verify_scanned_data():
     		else:
     			with open(LOG_FILE, 'a') as f:
     				f.write("Mismatch in the price of %s detected at %s.\
-    				 \n Recommended Price \t:%s \n Selling Price \t: %s"
+    				 \n Recommended Price \t:%s \n Selling Price \t: %s \n"
     				  %(label_data, str(datetime.datetime.now()), db_price, price))
     result["label_match"] = is_similar
     result["prices_match"] = prices_match
