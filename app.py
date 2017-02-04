@@ -84,7 +84,7 @@ def verify_scanned_data():
 	    else:
 	    	with open(LOG_FILE, 'a') as f:
 		    	log_str = "Labels not correctly placed for %s \n detected at time : %s.\
-		    				 \n Recommended Price \t:%s \n Selling Price \t: %s \n".format(label_data, str(datetime.datetime.now()), db_price, price)
+		    			  ".format(label_data, str(datetime.datetime.now()))
 		    	f.write(log_str)
     result["label_match"] = is_similar
     result["prices_match"] = prices_match
