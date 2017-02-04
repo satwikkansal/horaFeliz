@@ -7,7 +7,7 @@ This file creates your application.
 """
 
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import json
 import datetime
 import pandas as pd
@@ -47,9 +47,12 @@ def about():
 
 @app.route('/verify', methods=['POST'])
 def verify_scanned_data():
-    data = request.form
-    label_data = data.get("label_data").upper()
+    data = json.loads(request.form.to_dict().keys()[0])
+    print(data)
+    label_data = data.get("label_data")
+    print(label_data)
     ocr_data = data.get("ocr_data")
+    print(ocr_data)	
     prices_match = False
     result = {
     	"label_match":False,
@@ -74,10 +77,9 @@ def verify_scanned_data():
     				f.write("Mismatch in the price of %s detected at %s.\
     				 \n Recommended Price \t:%s \n Selling Price \t: %s"
     				  %(label_data, str(datetime.datetime.now()), db_price, price))
-	result["label_match"] = is_similar
-	result["prices_match"] = prices_match
-	return json.dumps(result)
-
+    result["label_match"] = is_similar
+    result["prices_match"] = prices_match
+    return jsonify(result)
 
 
 ###

@@ -10,4 +10,10 @@ Mismatch in the price of CORONA LIGHT detected at 2017-02-04 15:51:02.489704.
  Recommended Price 	:1299.0 
  Selling Price 	: 1249Mismatch in the price of CORONA LIGHT detected at 2017-02-04 15:59:42.145199.    				 
  Recommended Price 	:1299.0 
+ Selling Price 	: 1249Mismatch in the price of CORONA LIGHT detected at 2017-02-04 18:27:18.682472.    				 
+ Recommended Price 	:1299 
+ Selling Price 	: 1249Mismatch in the price of CORONA LIGHT detected at 2017-02-04 18:38:45.861753.    				 
+ Recommended Price 	:1299 
+ Selling Price 	: 1249Mismatch in the price of CORONA LIGHT detected at 2017-02-04 18:43:31.757242.    				 
+ Recommended Price 	:1299 
  Selling Price 	: 1249
