@@ -146,8 +146,6 @@ def closest_matching_answer(question):
 
 def extract_prices(num_str):
     #extracts prices from ocr_data
-    #clean up the string
-    num_str = re.sub('[^A-Za-z0-9$]+', '',num_str)
     if num_str:
     	decimal_price = re.findall(r'\$(\d+)', num_str)[0]
     	print '='*10, decimal_price
