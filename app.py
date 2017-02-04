@@ -60,12 +60,16 @@ def verify_scanned_data():
     }
     
     similarity_score = find_similarity(label_data,[ocr_data])
-    print '='*10, similarity_score
+    print '='*10
+    print similarity_score
+    print '='*10
     is_similar = False
-    if similarity_score[0] >= 0.4:
+    if similarity_score[0] >= 0.3:
     	is_similar = True
     	price = str(extract_prices(ocr_data))
-    	print "="*10, similarity_score
+    	print '='*10
+    	print price
+    	print '='*10
     	db_price = str(int(list(df[(df["Date"] == DATE) & (df["Brand"] == label_data)]["Recommended Price"])[0]*100))
     	if price == db_price:
     		prices_match = True
@@ -74,9 +78,14 @@ def verify_scanned_data():
     			prices_match == True
     		else:
     			with open(LOG_FILE, 'a') as f:
-    				f.write("Mismatch in the price of %s detected at %s.\
-    				 \n Recommended Price \t:%s \n Selling Price \t: %s \n"
-    				  %(label_data, str(datetime.datetime.now()), db_price, price))
+    				log_str = "Mismatch in the price of %s detected at %s.\
+    				 \n Recommended Price \t:%s \n Selling Price \t: %s \n".format(label_data, str(datetime.datetime.now()), db_price, price)
+    				f.write(log_str)
+    else:
+    	with open(LOG_FILE, 'a') as f:
+	    	log_str = "Labels not correctly placed for %s \n detected at time : %s.\
+	    				 \n Recommended Price \t:%s \n Selling Price \t: %s \n".format(label_data, str(datetime.datetime.now()), db_price, price)
+	    	f.write(log_str)
     result["label_match"] = is_similar
     result["prices_match"] = prices_match
     return jsonify(result)
