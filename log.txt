@@ -1,0 +1,17 @@
+Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Labels not correctly placed for %s 
+ detected at time : %s.		    			  Mismatch in the price of %s detected at %s.	    				 
+ Recommended Price 	:%s 
+ Selling Price 	: %s 
+Mismatch in the price of %s detected at %s.	    				 
+ Recommended Price 	:%s 
+ Selling Price 	: %s 
