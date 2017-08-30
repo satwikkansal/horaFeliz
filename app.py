@@ -12,7 +12,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 CSV_FILENAME = "recommended_prices.csv"
 LOG_FILE = "log.txt"
 
-DATE = '04/01/2015'
+DATE = '04/01/2017'
 
 f = pd.read_csv(CSV_FILENAME)
 df = pd.DataFrame(f)
