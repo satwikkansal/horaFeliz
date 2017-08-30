@@ -15,7 +15,6 @@ mock
 # ----------------------
 gevent
 gunicorn
-
 pandas
 numpy
 scikit-learn
